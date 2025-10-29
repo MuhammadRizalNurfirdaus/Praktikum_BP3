@@ -10,12 +10,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NAMA : MUHAMMAD RIZKI APRILIANTO\nNIM  : 20230810088\nKELAS : IF-6"
+        android:text="NAMA : MUHAMMAD RIZAL NURFIRDAUS\nNIM  : 20230810088\nKELAS : TINFC-2023-04\nPRODI : TEKNIK INFORMATIKA\nFAKULTAS : ILMU KOMPUTER\nKAMPUS : UNIVERSITAS KUNINGAN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintVertical_bias="0.025" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
