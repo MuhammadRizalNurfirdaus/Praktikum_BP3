@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/pab/modul3_activity2/halaman_selanjutnya.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/pab/modul3_activity2/halaman_selanjutnya.kt" />
+              <option name="originalContent" value="package com.pab.modul3_activity2&#10;&#10;import android.os.Bundle&#10;import androidx.activity.enableEdgeToEdge&#10;import androidx.appcompat.app.AppCompatActivity&#10;import androidx.core.view.ViewCompat&#10;import androidx.core.view.WindowInsetsCompat&#10;&#10;class halaman_selanjutnya : AppCompatActivity() {&#10;    override fun onCreate(savedInstanceState: Bundle?) {&#10;        super.onCreate(savedInstanceState)&#10;        enableEdgeToEdge()&#10;        setContentView(R.layout.activity_halaman_selanjutnya)&#10;//inisiasikan button ke variabel&#10;        val btn_pindah = findViewById&lt;Button&gt;(R.id.btn_pindah_halaman1)&#10;////aksi ketika button diklik&#10;        btn_pindah.setOnClickListener {&#10;            val intent = Intent(this, MainActivity::class.java)&#10;            startActivity(intent)&#10;        }&#10;    }&#10;}" />
+              <option name="updatedContent" value="package com.pab.modul3_activity2&#10;&#10;import android.os.Bundle&#10;import androidx.activity.enableEdgeToEdge&#10;import androidx.appcompat.app.AppCompatActivity&#10;&#10;class halaman_selanjutnya : AppCompatActivity() {&#10;    override fun onCreate(savedInstanceState: Bundle?) {&#10;        super.onCreate(savedInstanceState)&#10;        enableEdgeToEdge()&#10;        setContentView(R.layout.activity_halaman_selanjutnya)&#10;//inisiasikan button ke variabel&#10;        val btn_pindah: android.widget.Button = findViewById(R.id.btn_pindah_halaman1)&#10;         // aksi ketika button diklik&#10;         btn_pindah.setOnClickListener {&#10;             val intent = android.content.Intent(this, MainActivity::class.java)&#10;             startActivity(intent)&#10;         }&#10;     }&#10; }" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

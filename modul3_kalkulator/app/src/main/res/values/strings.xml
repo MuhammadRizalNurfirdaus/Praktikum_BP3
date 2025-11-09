@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">kalkulator bangun ruang</string>
+    <string name="luas_lingkaran">Luas Lingkaran</string>
+    <string name="masukan_jari">Masukan Jari-jari</string>
+    <string name="radius">Radius</string>
+    <string name="hitung_luas">Hitung Luas</string>
+    <string name="hasilnya">Hasilnya</string>
+    <string name="dash">----</string>
+
+    <string name="luas_persegi_panjang">Luas Persegi Panjang</string>
+    <string name="masukan_panjang">Masukan Panjang</string>
+    <string name="panjang">Panjang</string>
+    <string name="masukan_lebar">Masukan Lebar</string>
+    <string name="lebar">Lebar</string>
+</resources>
