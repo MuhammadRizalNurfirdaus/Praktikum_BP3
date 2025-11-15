@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">tugas_m4</string>
+
+    <!-- Labels -->
+    <string name="label_name_x">Name: %1$s</string>
+    <string name="label_email_x">Email: %1$s</string>
+    <string name="label_age_x">Age: %1$d</string>
+    <string name="label_name_unknown">Name: -</string>
+    <string name="label_email_unknown">Email: -</string>
+    <string name="label_age_unknown">Age: -</string>
+
+    <!-- Toasts -->
+    <string name="toast_no_user">No user data received</string>
+
+    <!-- Sharing -->
+    <string name="share_user_format">User: %1$s, %2$s, age %3$d</string>
+    <string name="share_default_text">Hello from DetailActivity</string>
+    <string name="share_chooser_title">Share via</string>
+</resources>
