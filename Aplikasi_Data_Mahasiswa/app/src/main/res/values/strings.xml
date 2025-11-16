@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Aplikasi Data Mahasiswa</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="menu_data_mahasiswa">Data Mahasiswa</string>
+    <string name="menu_tambah_mahasiswa">Tambah Mahasiswa</string>
+    <string name="menu_statistik">Statistik</string>
+    <string name="menu_tentang">Tentang Aplikasi</string>
+
+    <!-- Placeholder screen titles -->
+    <string name="title_data_mahasiswa">Data Mahasiswa</string>
+    <string name="title_tambah_mahasiswa">Tambah Mahasiswa</string>
+    <string name="title_statistik">Statistik</string>
+    <string name="title_tentang">Tentang Aplikasi</string>
+</resources>

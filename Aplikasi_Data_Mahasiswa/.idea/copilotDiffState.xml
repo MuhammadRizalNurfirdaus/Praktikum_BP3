@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/res/drawable/circle_mask.xml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/res/drawable/circle_mask.xml" />
+              <option name="updatedContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:shape=&quot;oval&quot;&gt;&#10;    &lt;size android:width=&quot;96dp&quot; android:height=&quot;96dp&quot; /&gt;&#10;    &lt;solid android:color=&quot;#FFFFFFFF&quot; /&gt;&#10;&lt;/shape&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/drawable/ic_profile_20_muhammad_rizal.xml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/res/drawable/ic_profile_20_muhammad_rizal.xml" />
+              <option name="originalContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;!-- Profile icon for 20.muhammad_rizal — shows photo if available, otherwise placeholder --&gt;&#10;&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;&#10;    &lt;!-- Circular colored background --&gt;&#10;    &lt;item&gt;&#10;        &lt;shape android:shape=&quot;oval&quot;&gt;&#10;            &lt;size android:width=&quot;96dp&quot; android:height=&quot;96dp&quot; /&gt;&#10;            &lt;solid android:color=&quot;#FFBBDEFB&quot; /&gt;&#10;        &lt;/shape&gt;&#10;    &lt;/item&gt;&#10;&#10;    &lt;!-- Photo centered on top of background (will not be perfectly cropped to circle at resource level) --&gt;&#10;    &lt;item&gt;&#10;        &lt;bitmap android:src=&quot;@drawable/muhammad_rizal&quot; android:gravity=&quot;center&quot; android:antialias=&quot;true&quot; /&gt;&#10;    &lt;/item&gt;&#10;&#10;    &lt;!-- Silhouette placeholder on top as fallback (will overlay if photo has transparency) --&gt;&#10;    &lt;item android:drawable=&quot;@drawable/ic_profile_placeholder&quot; android:gravity=&quot;center&quot; /&gt;&#10;&lt;/layer-list&gt;&#10;" />
+              <option name="updatedContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;!-- Profile icon for 20.muhammad_rizal — shows photo without overlay placeholder --&gt;&#10;&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;&#10;    &lt;!-- Circular colored background --&gt;&#10;    &lt;item&gt;&#10;        &lt;shape android:shape=&quot;oval&quot;&gt;&#10;            &lt;size android:width=&quot;96dp&quot; android:height=&quot;96dp&quot; /&gt;&#10;            &lt;solid android:color=&quot;#FFBBDEFB&quot; /&gt;&#10;        &lt;/shape&gt;&#10;    &lt;/item&gt;&#10;&#10;    &lt;!-- Photo centered on top of background --&gt;&#10;    &lt;item&gt;&#10;        &lt;bitmap android:src=&quot;@drawable/muhammad_rizal&quot; android:gravity=&quot;center&quot; android:antialias=&quot;true&quot; /&gt;&#10;    &lt;/item&gt;&#10;&lt;/layer-list&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/drawable/ic_profile_placeholder.xml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/res/drawable/ic_profile_placeholder.xml" />
+              <option name="updatedContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#10;&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#10;    android:width=&quot;108dp&quot;&#10;    android:height=&quot;108dp&quot;&#10;    android:viewportWidth=&quot;108&quot;&#10;    android:viewportHeight=&quot;108&quot;&gt;&#10;    &lt;!-- Simple person silhouette placeholder --&gt;&#10;    &lt;path&#10;        android:fillColor=&quot;#FF9E9E9E&quot;&#10;        android:pathData=&quot;M54,30a12,12 0 1,0 0.001,0z&quot; /&gt;&#10;    &lt;path&#10;        android:fillColor=&quot;#FFBDBDBD&quot;&#10;        android:pathData=&quot;M27,90c0,-14.9 12.1,-27 27,-27s27,12.1 27,27H27z&quot; /&gt;&#10;&lt;/vector&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
