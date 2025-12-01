@@ -20,8 +20,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Buka form pendaftaran saat tombol Daftar ditekan
-        findViewById<View?>(R.id.btnDaftar)?.setOnClickListener {
+        findViewById<View?>(R.id.btn_daftar)?.setOnClickListener {
             startActivity(Intent(this, Pendaftaran::class.java))
+        }
+
+        // Buka LoginActivity saat tombol Masuk ditekan
+        findViewById<View?>(R.id.btn_masuk)?.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }

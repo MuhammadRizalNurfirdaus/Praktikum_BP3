@@ -22,7 +22,7 @@ class Pendaftaran : AppCompatActivity() {
             insets
         }
 
-        val btnSimpan: Button = findViewById(R.id.btn_simpan)
+        val btnSimpan: Button = findViewById(R.id.btnSimpan)
         val btnKembali: Button = findViewById(R.id.btn_kembali)
 
         btnSimpan.setOnClickListener {
@@ -30,8 +30,6 @@ class Pendaftaran : AppCompatActivity() {
         }
 
         btnKembali.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
             finish()
         }
     }

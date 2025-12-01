@@ -1,20 +1,21 @@
 package com.pab.halaman_login
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.button.MaterialButton
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val emailField: TextInputEditText = findViewById(R.id.etEmail)
-        val passwordField: TextInputEditText = findViewById(R.id.etPassword)
-        val btnMasuk: MaterialButton = findViewById(R.id.btnMasuk)
-        val btnDaftar: MaterialButton = findViewById(R.id.btnDaftar)
+        val emailField: EditText = findViewById(R.id.etEmail)
+        val passwordField: EditText = findViewById(R.id.etPassword)
+        val btnMasuk: Button = findViewById(R.id.btnMasuk)
+        val btnDaftar: Button = findViewById(R.id.btnDaftar)
 
         btnMasuk.setOnClickListener {
             val email = emailField.text?.toString().orEmpty().trim()
@@ -22,12 +23,13 @@ class LoginActivity : AppCompatActivity() {
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Email atau password kosong", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Login ditekan: $email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login berhasil: $email", Toast.LENGTH_SHORT).show()
             }
         }
 
         btnDaftar.setOnClickListener {
-            Toast.makeText(this, "Tombol Daftar ditekan", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, Pendaftaran::class.java)
+            startActivity(intent)
         }
     }
 }
