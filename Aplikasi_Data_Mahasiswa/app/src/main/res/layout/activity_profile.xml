@@ -4,36 +4,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/background_gradient">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
+        style="@style/ToolbarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
-        app:title="Profil" />
+        app:title="@string/profile_title" />
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_profile"
+        style="@style/ProfileImageStyle"
         android:layout_marginTop="24dp"
-        android:src="@drawable/muhammad_rizal" />
+        android:src="@drawable/muhammad_rizal"
+        android:contentDescription="@string/profile_image_desc"
+        app:shapeAppearanceOverlay="@style/CircleShapeAppearance" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama: Muhammad Rizal Nurfirdaus"
-        android:layout_marginTop="16dp" />
+        style="@style/ProfileNameStyle"
+        android:text="@string/profile_name"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NIM: 20230810088" />
+        style="@style/ProfileInfoStyle"
+        android:text="@string/profile_nim"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Program Studi: Informatika" />
+        style="@style/ProfileInfoStyle"
+        android:text="@string/profile_study"
+        android:textColor="@android:color/black" />
 
 </LinearLayout>

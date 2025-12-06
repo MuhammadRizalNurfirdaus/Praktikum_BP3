@@ -70,13 +70,19 @@
         <item name="android:lineSpacingExtra">4dp</item>
     </style>
 
+    <!-- Shape appearance for circular profile image -->
+    <style name="CircleShapeAppearance" parent="ShapeAppearance.Material3.Corner.None">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
     <!-- Background Styles -->
     <style name="GradientBackgroundStyle">
-        <item name="android:background">@drawable/background_gradient</item>
+        <item name="android:background">@drawable/background_app_primary</item>
     </style>
 
     <style name="LightGradientBackgroundStyle">
-        <item name="android:background">@drawable/background_light_gradient</item>
+        <item name="android:background">@drawable/background_app_primary_light</item>
     </style>
 
     <style name="CardBackgroundStyle">

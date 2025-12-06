@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/custom_background">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
@@ -18,14 +19,16 @@
         android:id="@+id/etNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama" />
+        android:hint="Nama"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/etNim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="NIM"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/btnSimpan"

@@ -13,4 +13,11 @@
     <string name="title_tambah_mahasiswa">Tambah Mahasiswa</string>
     <string name="title_statistik">Statistik</string>
     <string name="title_tentang">Tentang Aplikasi</string>
+
+    <!-- Profile strings -->
+    <string name="profile_title">Profil</string>
+    <string name="profile_image_desc">Foto profil Muhammad Rizal</string>
+    <string name="profile_name">Nama: Muhammad Rizal Nurfirdaus</string>
+    <string name="profile_nim">NIM: 20230810088</string>
+    <string name="profile_study">Program Studi: Informatika</string>
 </resources>
