@@ -2,4 +2,40 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="primary">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="primary_light">#BB86FC</color>
+    <color name="accent">#03DAC5</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#9E9E9E</color>
+
+    <!-- Profile Colors -->
+    <color name="profile_background">#E8EAF6</color>
+    <color name="profile_border">#6200EE</color>
+
+    <!-- Card Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#667eea</color>
+    <color name="gradient_end">#764ba2</color>
+    <color name="gradient_center">#6E7BE7</color>
+    <color name="gradient_light_start">#f093fb</color>
+    <color name="gradient_light_end">#f5576c</color>
+
+    <!-- Background Overlay -->
+    <color name="background_overlay">#F3F4F6</color>
+    <color name="background_card_overlay">#80FFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>

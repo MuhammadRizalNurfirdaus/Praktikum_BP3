@@ -1,9 +1,129 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Aplikasi_Data_Mahasiswa" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+
+        <!-- Background Colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+
+        <!-- Text Colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
     </style>
 
     <style name="Theme.Aplikasi_Data_Mahasiswa" parent="Base.Theme.Aplikasi_Data_Mahasiswa" />
+
+    <!-- Toolbar Style -->
+    <style name="ToolbarStyle" parent="Widget.Material3.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- Profile Image Style -->
+    <style name="ProfileImageStyle">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!-- Profile Name Style -->
+    <style name="ProfileNameStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <!-- Profile Info Style -->
+    <style name="ProfileInfoStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="CardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <!-- Section Title Style -->
+    <style name="SectionTitleStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- Body Text Style -->
+    <style name="BodyTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <!-- Background Styles -->
+    <style name="GradientBackgroundStyle">
+        <item name="android:background">@drawable/background_gradient</item>
+    </style>
+
+    <style name="LightGradientBackgroundStyle">
+        <item name="android:background">@drawable/background_light_gradient</item>
+    </style>
+
+    <style name="CardBackgroundStyle">
+        <item name="android:background">@drawable/card_background_gradient</item>
+    </style>
+
+    <style name="RoundedBackgroundStyle">
+        <item name="android:background">@drawable/rounded_background</item>
+    </style>
+
+    <!-- Enhanced Card Style with Shadow -->
+    <style name="EnhancedCardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/transparent</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <!-- Profile Card Container Style -->
+    <style name="ProfileCardContainerStyle">
+        <item name="android:background">@drawable/profile_card_background</item>
+        <item name="android:padding">24dp</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="GradientButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/button_gradient_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!-- Elevated Card Background Style -->
+    <style name="ElevatedCardBackgroundStyle">
+        <item name="android:background">@drawable/card_elevated_background</item>
+    </style>
+
+    <!-- Soft Gradient Background Style -->
+    <style name="SoftGradientBackgroundStyle">
+        <item name="android:background">@drawable/background_soft_gradient</item>
+    </style>
+
+    <!-- Overlay Background Style -->
+    <style name="OverlayBackgroundStyle">
+        <item name="android:background">@drawable/background_gradient_overlay</item>
+    </style>
 </resources>
