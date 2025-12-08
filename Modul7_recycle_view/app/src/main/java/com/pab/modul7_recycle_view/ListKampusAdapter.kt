@@ -1,6 +1,6 @@
 package com.pab.modul7_recycle_view
 
-import android.app.AlertDialog
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,20 +28,12 @@ class ListKampusAdapter(private val listKampus: ArrayList<Kampus>) :
         holder.tvLokasi.text = lokasi
         holder.tvSejarahKampus.text = sejarah
 
-        // Handling click pada item
-        holder.itemView.setOnClickListener { view ->
+        // Handling click pada item - membuka DetailActivity
+        holder.itemView.setOnClickListener {
             val context = holder.itemView.context
-            val builder = AlertDialog.Builder(context)
-
-            builder.setIcon(photo)
-            builder.setMessage("$lokasi\n$sejarah")
-            builder.setTitle("Detail Kampus: $nama")
-            builder.setPositiveButton("OK") { dialog, _ ->
-                dialog.dismiss() // Menutup dialog ketika tombol OK ditekan
-            }
-
-            val dialog: AlertDialog = builder.create()
-            dialog.show()
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_KAMPUS, kampus)
+            context.startActivity(intent)
         }
     }
 

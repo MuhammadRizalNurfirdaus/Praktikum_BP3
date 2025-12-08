@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/modul7_recycle_view/DetailActivity.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/example/modul7_recycle_view/DetailActivity.kt" />
+              <option name="originalContent" value="package com.example.modul7_recycle_view&#10;" />
+              <option name="updatedContent" value="&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/modul7_recycle_view/ItemAdapter.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/example/modul7_recycle_view/ItemAdapter.kt" />
+              <option name="originalContent" value="// ...existing code...&#10;}&#10;    // ...existing code...&#10;&#10;    }&#10;        }&#10;            onItemClick(item)&#10;        holder.itemView.setOnClickListener {&#10;        // Add click listener&#10;&#10;        holder.bind(item)&#10;        val item = itemList[position]&#10;    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {&#10;&#10;    // ...existing code...&#10;&#10;) : RecyclerView.Adapter&lt;ItemAdapter.ItemViewHolder&gt;() {&#10;    private val onItemClick: (Item) -&gt; Unit&#10;    private val itemList: List&lt;Item&gt;,&#10;class ItemAdapter(&#10;&#10;&#10;" />
+              <option name="updatedContent" value="}&#10;    // ...existing code...&#10;&#10;    }&#10;        }&#10;            onItemClick(item)&#10;        holder.itemView.setOnClickListener {&#10;        // Add click listener&#10;        &#10;        holder.bind(item)&#10;        val item = itemList[position]&#10;    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {&#10;&#10;    // ...existing code...&#10;&#10;) : RecyclerView.Adapter&lt;ItemAdapter.ItemViewHolder&gt;() {&#10;    private val onItemClick: (Item) -&gt; Unit&#10;    private val itemList: List&lt;Item&gt;,&#10;class ItemAdapter(&#10;&#10;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
