@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tugas_M10</string>
+    <string name="title_accelerometer">Accelerometer Sensor</string>
+    <string name="subtitle_motion">Deteksi Gerakan Perangkat</string>
+    <string name="label_sensor_data">Data Sensor</string>
+    <string name="label_axis_x">Sumbu X:</string>
+    <string name="label_axis_y">Sumbu Y:</string>
+    <string name="label_axis_z">Sumbu Z:</string>
+    <string name="default_value">0.00</string>
+    <string name="label_status">Status Gerakan</string>
+    <string name="status_still">Diam</string>
+    <string name="info_text">Goyangkan perangkat untuk melihat perubahan</string>
+</resources>

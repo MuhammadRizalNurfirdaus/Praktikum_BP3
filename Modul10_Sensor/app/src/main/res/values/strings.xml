@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Modul10_Sensor</string>
+    <string name="proximity_active">Proximity Sensor Active</string>
+    <string name="too_close">Jarak Terlalu Dekat!</string>
+</resources>
