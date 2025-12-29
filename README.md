@@ -23,7 +23,7 @@ Repository ini berisi kumpulan project dan tugas praktikum Bahasa Pemrograman 3 
 - [Modul 5-6: Advanced Topics](#modul-5-6-advanced-topics)
 - [Modul 7: RecyclerView](#modul-7-recyclerview)
 - [Modul 8: Navigation & AppBar](#modul-8-navigation--appbar)
-- [Modul 9: Advanced UI](#modul-9-advanced-ui)
+- [Modul 9: Networking & API Integration](#modul-9-networking--api-integration-retrofit)
 - [Modul 10: Sensors](#modul-10-sensors)
 - [Cara Menjalankan Project](#-cara-menjalankan-project)
 - [Teknologi yang Digunakan](#-teknologi-yang-digunakan)
@@ -74,6 +74,8 @@ Praktikum_BP3/
 ├── Modul8_appbar/                    # AppBar & Toolbar
 ├── modul8_navigation_drawer/         # Navigation Drawer
 ├── modul8_laprak/                    # Laporan Praktikum Modul 8
+├── Modul9_Retrofit/                  # Retrofit & Networking
+├── Tugas_M9/                         # Tugas Modul 9
 ├── modul9_laprak/                    # Laporan Praktikum Modul 9
 ├── Modul10_Sensor/                   # Sensor Implementation
 ├── modul10_laprak/                   # Laporan Praktikum Modul 10
@@ -489,26 +491,152 @@ class MainActivity : AppCompatActivity() {
 
 ---
 
-## Modul 9: Advanced UI
+## Modul 9: Networking & API Integration (Retrofit)
 
 ### 📚 Materi yang Dipelajari
-1. **Custom Views**
-   - Canvas Drawing
-   - Custom Attributes
-   - Touch Events
+1. **RESTful API**
+   - HTTP Methods (GET, POST, PUT, DELETE)
+   - API endpoints
+   - JSON parsing
 
-2. **Animations**
-   - View Animations
-   - Property Animations
-   - Transition Animations
+2. **Retrofit Library**
+   - Setup dan konfigurasi
+   - API interface definition
+   - Retrofit Builder
+   - Converter Factory (Gson/Moshi)
 
-3. **Material Motion**
-   - Shared Element Transitions
-   - Container Transform
-   - Fade Through
+3. **Asynchronous Programming**
+   - Coroutines untuk network calls
+   - Error handling
+   - Loading states
+
+4. **MVVM with Repository Pattern**
+   - Separation of concerns
+   - Repository layer
+   - ViewModel integration
+
+### 📱 Project-Project
+
+#### 1. Modul9_Retrofit
+Aplikasi yang menggunakan Retrofit untuk mengakses REST API.
+
+```kotlin
+// API Service Interface
+interface ApiService {
+    @GET("users")
+    suspend fun getUsers(): Response<List<User>>
+    
+    @GET("users/{id}")
+    suspend fun getUserById(@Path("id") id: Int): Response<User>
+    
+    @POST("users")
+    suspend fun createUser(@Body user: User): Response<User>
+    
+    @PUT("users/{id}")
+    suspend fun updateUser(@Path("id") id: Int, @Body user: User): Response<User>
+    
+    @DELETE("users/{id}")
+    suspend fun deleteUser(@Path("id") id: Int): Response<Unit>
+}
+
+// Retrofit Instance
+object RetrofitInstance {
+    private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+    
+    private val retrofit by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+    
+    val api: ApiService by lazy {
+        retrofit.create(ApiService::class.java)
+    }
+}
+
+// Repository
+class UserRepository {
+    suspend fun getUsers(): Result<List<User>> {
+        return try {
+            val response = RetrofitInstance.api.getUsers()
+            if (response.isSuccessful && response.body() != null) {
+                Result.success(response.body()!!)
+            } else {
+                Result.failure(Exception("Error: ${response.code()}"))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+}
+
+// ViewModel
+class UserViewModel : ViewModel() {
+    private val repository = UserRepository()
+    private val _users = MutableLiveData<List<User>>()
+    val users: LiveData<List<User>> = _users
+    
+    private val _loading = MutableLiveData<Boolean>()
+    val loading: LiveData<Boolean> = _loading
+    
+    private val _error = MutableLiveData<String?>()
+    val error: LiveData<String?> = _error
+    
+    fun loadUsers() {
+        viewModelScope.launch {
+            _loading.value = true
+            repository.getUsers().fold(
+                onSuccess = { data ->
+                    _users.value = data
+                    _error.value = null
+                },
+                onFailure = { exception ->
+                    _error.value = exception.message
+                }
+            )
+            _loading.value = false
+        }
+    }
+}
+```
+
+#### 2. Tugas_M9
+Aplikasi lengkap dengan implementasi CRUD menggunakan Retrofit.
+
+#### Fitur
+- Fetch data dari REST API
+- Display data dengan RecyclerView
+- Create new data
+- Update existing data
+- Delete data
+- Error handling & loading states
+- Material Design UI
+- MVVM Architecture
+
+#### Dependencies (build.gradle.kts)
+```kotlin
+dependencies {
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    
+    // ViewModel & LiveData
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+}
+```
 
 ### 📂 Folder
-- `modul9_laprak/` - Laporan dan project modul 9
+- `Modul9_Retrofit/` - Project praktikum Retrofit
+- `Tugas_M9/` - Tugas modul 9 (CRUD dengan API)
+- `modul9_laprak/` - Laporan praktikum modul 9
 
 ---
 
@@ -769,10 +897,12 @@ cd Praktikum_BP3
 
 ### Libraries (jika digunakan)
 - **Glide/Picasso** - Image loading
-- **Retrofit** - Networking
+- **Retrofit** - Networking & REST API
+- **Gson/Moshi** - JSON parsing
 - **Room** - Database ORM
 - **Coroutines** - Asynchronous programming
 - **LiveData & ViewModel** - Architecture components
+- **OkHttp** - HTTP client
 
 ---
 
@@ -886,7 +1016,8 @@ org.gradle.jvmargs=-Xmx2048m
 ### Modul 7-9: Advanced UI
 - Complex layouts dengan RecyclerView
 - Navigation patterns
-- Custom views dan animations
+- Networking dan API integration
+- MVVM Architecture
 
 ### Modul 10: Hardware Integration
 - Sensor integration
@@ -927,6 +1058,6 @@ Project ini dibuat untuk keperluan pembelajaran Praktikum Bahasa Pemrograman 3.
 
 ---
 
-**© 2024 Muhammad Rizal Nurfirdaus - 20230810088**
+**© 2025 Muhammad Rizal Nurfirdaus - 20230810088**
 
 *Praktikum Bahasa Pemrograman 3 - Dede Husen, M.Kom.*
